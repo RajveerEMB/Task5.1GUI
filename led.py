@@ -52,9 +52,13 @@ led_choice = tk.IntVar()
 label = tk.Label(window, text="Control LED", font=("Arial", 20))
 label.pack(pady=15)
 
-led_radio_c1 = tk.Radiobutton(window, text="Red LED", variable=led_choice, value=1, command=control_led)
-led_radio_c2 = tk.Radiobutton(window, text="Green LED", variable=led_choice, value=2, command=control_led)
-led_radio_c3 = tk.Radiobutton(window, text="Blue LED", variable=led_choice, value=3, command=control_led)
+# Creating radio buttons with corresponding LED colors
+led_radio_c1 = tk.Radiobutton(window, text="Red LED", variable=led_choice, value=1, 
+                              command=control_led, fg="red", selectcolor="red")
+led_radio_c2 = tk.Radiobutton(window, text="Green LED", variable=led_choice, value=2, 
+                              command=control_led, fg="green", selectcolor="green")
+led_radio_c3 = tk.Radiobutton(window, text="Blue LED", variable=led_choice, value=3, 
+                              command=control_led, fg="blue", selectcolor="blue")
 
 led_radio_c1.pack(anchor=tk.W, padx=20)
 led_radio_c2.pack(anchor=tk.W, padx=20)
